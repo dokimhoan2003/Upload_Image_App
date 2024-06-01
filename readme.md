@@ -1,6 +1,6 @@
 # Getting Started
 
-## First, install the dependencies:
+### First, install the dependencies:
 
 `npm install`
 
