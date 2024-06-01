@@ -1,0 +1,72 @@
+<%- include('layout/header') %>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-6 mx-auto mt-4">
+      <div class="card shadow">
+        <div class="card-header bg-primary">
+          <h5 class="text-light">Thêm User mới</h5>
+        </div>
+        <div class="card-body p-4">
+          <form
+            action="/add"
+            method="post"
+            id="add-form"
+            enctype="multipart/form-data"
+          >
+            <div class="mb-3">
+              <label for="name">Tên</label>
+              <input
+                type="text"
+                name="name"
+                class="form-control form-control-lg"
+                placeholder="Nhập tên"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                name="email"
+                class="form-control form-control-lg"
+                placeholder="Nhập Email"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="phone">Số điện thoại</label>
+              <input
+                type="tel"
+                name="phone"
+                class="form-control form-control-lg"
+                placeholder="Nhập số điện thoại "
+                required
+              />
+              <% if(message) { %>
+              <p style="color: red"><%= message %></p>
+              <% } %>
+            </div>
+            <div class="mb-3">
+              <label for="image" class="form-label">Chọn ảnh</label>
+              <input
+                type="file"
+                name="image"
+                class="form-control form-control-lg"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <input
+                type="submit"
+                name="submit"
+                value="Thêm"
+                class="btn btn-primary btn-lg"
+              />
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<%- include('layout/footer') %>
