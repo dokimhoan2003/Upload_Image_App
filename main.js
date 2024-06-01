@@ -8,9 +8,6 @@ const app = express();
 const PORT = process.env.PORT || 4000;
 
 //kết nối database
-// mongoose
-//   .connect(process.env.DB_URI)
-//   .then(() => console.log("DB connection successful!"));
 mongoose.connect(process.env.DB_URI);
 const db = mongoose.connection;
 db.on("error", (error) => console.log(error));
